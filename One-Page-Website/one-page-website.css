@@ -10,7 +10,7 @@ html {
 }
 /* Header section */
 header {
-  background-image: url(./lantern-g009ba4e08_1280.jpg);
+  background-image: url(lantern-g009ba4e08_1280.jpg);
   height: 20vh;
   object-fit: contain;
   background-position-y: center;
@@ -25,7 +25,7 @@ header h1 {
 }
 /* Navigation bar */
 nav {
-  background-image: url(./wood.jpg);
+  background-image: url(wood.jpg);
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
@@ -56,7 +56,7 @@ ul li a:hover {
 
 /* Menu section */
 section {
-  background-image: url(./wood.jpg);
+  background-image: url(wood.jpg);
   border-radius: 10px;
 }
 
@@ -65,7 +65,7 @@ section {
   width: 100%;
   padding: 25px 60px;
   color: beige;
-  background-image: url(./restaurant-china.jpg);
+  background-image: url(restaurant-china.jpg);
   object-position: center;
   border-radius: 10px;
   margin: 5px 0;
@@ -113,7 +113,7 @@ div img:hover {
   padding: 20px 0;
 }
 .form {
-  background-image: url(./restaurant-china.jpg);
+  background-image: url(restaurant-china.jpg);
   color: rgb(228, 175, 52);
   width: 100%;
   border-radius: 10px;
@@ -130,7 +130,7 @@ div img:hover {
   font-size: 20px;
 }
 footer {
-  background-image: url(./wood.jpg);
+  background-image: url(wood.jpg);
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
   height: 130px;
