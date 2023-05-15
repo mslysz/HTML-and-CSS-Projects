@@ -20,7 +20,7 @@ This page is created as an example of a website designed for Zoo.
 I used CSS to style the page.
 ## Authors
 
-- [@mslysz](https://https://github.com/mslysz)
+- [@mslysz](https://github.com/mslysz)
 
 
 ## 🔗 Links
