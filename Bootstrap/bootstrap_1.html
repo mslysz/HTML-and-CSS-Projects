@@ -13,6 +13,29 @@
     />
   </head>
   <body>
+    <div
+      class="alert alert-primary d-flex align-items-center justify-content-center"
+      role="alert"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        fill="currentColor"
+        class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2"
+        viewBox="0 0 16 16"
+        role="img"
+        aria-label="Warning:"
+      >
+        <path
+          d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"
+        />
+      </svg>
+      <div>
+        From 23.06 - 27.06 maintenance work will be carried out on our website.
+        Our website may not work properly. We apologise for any inconvenience.
+      </div>
+    </div>
     <div class="container">
       <nav class="navbar navbar-expand-lg navbar-light bg-info">
         <div class="container-fluid">
@@ -113,9 +136,11 @@
         </div>
       </div>
       <!-- Showtimes -->
-
-      <div class="container my-5" id="Showtimes">
-        <h3>Showtimes:</h3>
+      <h3 class="text-center">Showtimes:</h3>
+      <div
+        class="container my-5 d-flex align-items-center justify-content-center"
+        id="Showtimes"
+      >
         <div class="row">
           <div class="col-sm">
             <div class="card" style="width: 18rem">
@@ -196,7 +221,34 @@
           </div>
         </div>
       </div>
-
+      <!-- jumbotron heading -->
+      <div class="jumbotron jumbotron-fluid bg-info mt-5 text-center">
+        <div class="container">
+          <h1
+            class="display-4 hidden-sm-down"
+            style="
+              color: #fff;
+              font-family: roboto;
+              font-weight: 900;
+              text-transform: uppercase;
+            "
+          >
+            Movie Deals
+          </h1>
+          <p class="lead">Check out our monthly deals...</p>
+          <!-- movie deals -->
+          <button
+            type="button"
+            class="btn btn-warning"
+            data-bs-toggle="modal"
+            data-bs-target="#register"
+          >
+            See our monthly movie deals
+          </button>
+          <!-- movie deals -->
+        </div>
+      </div>
+      <!-- end jumbotron -->
       <div class="text-center" id="Deals">
         <form>
           <h1 class="text-primary my-5">Sign up for Movie Club Rewards!</h1>
@@ -209,10 +261,98 @@
               placeholder="Enter email"
             />
           </div>
-          <button type="submit " class="btn btn-primary mt-2">Submit</button>
+          <a
+            tabindex="0"
+            type="button"
+            class="btn btn-info"
+            data-bs-trigger="focus"
+            data-bs-container="body"
+            data-bs-toggle="popover"
+            data-bs-placement="right"
+            data-bs-content="Submit your e-mail to receive great movie deals!"
+          >
+            Sign Up!
+          </a>
         </form>
       </div>
+      <!-- modal -->
+      <!-- Button trigger modal -->
 
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="register"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Register form</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <!-- modal body -->
+            <div class="modal-body">
+              <div class="mb-3">
+                <label for="firstname" class="form-label">First Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="firstname"
+                  placeholder="First Name"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="lastname" class="form-label">Last Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="lastname"
+                  placeholder="Last Name"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label"
+                  >Email address</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="email"
+                  placeholder="E-mail adress"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="password"
+                  placeholder="Password"
+                />
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button type="button" class="btn btn-primary">
+                Save changes
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="container my-5 bg-info mb-4">
         <ul class="nav nav-inline">
           <li class="nav-item">
@@ -245,5 +385,19 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+    <script>
+      var popoverTriggerList = [].slice.call(
+        document.querySelectorAll('[data-bs-toggle="popover"]')
+      );
+      var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+        return new bootstrap.Popover(popoverTriggerEl);
+      });
+      var popover = new bootstrap.Popover(
+        document.querySelector(".popover-dismiss"),
+        {
+          trigger: "focus",
+        }
+      );
+    </script>
   </body>
 </html>
